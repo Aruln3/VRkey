@@ -142,7 +142,7 @@ public class MyProject {
 	        }
 	
       public static void main(String[] args) {
-		     System.out.println("Welcome To Company Lockers Pvt. Ltd.");
+		     System.out.println("Welcome To Lockers Pvt. Ltd.");
 	         MyProject menu = new  MyProject();
 	         menu.mainPage();
 	     }
