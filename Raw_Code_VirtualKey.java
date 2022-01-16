@@ -105,18 +105,18 @@ public class MyProject {
 	         }
 	     }
 
-       void addFileMethod(String filename) throws IOException {
-	        File filepath = new File(handledFiles +"/"+filename+"/n");
-	        String[] list = handledFiles.list();
-	        for (String file: list) {
-	           if (filename.equalsIgnoreCase(file)) {
-	               System.out.println("File " + filename + " already exists at " + handledFiles);
-                   return;
-	              }
-	          }
-	          filepath.createNewFile();
-	          System.out.println("File "+filename+" added to "+ handledFiles);
+	   void addFileMethod(String filename) throws IOException {
+	         File filepath = new File(handledFiles +"/"+filename);
+	         String[] list = handledFiles.list();
+	         for (String file: list) {
+	             if (filename.equalsIgnoreCase(file)) {
+	                 System.out.println("File " + filename + " already exists at " + handledFiles);
+	                 return;
+	             }
 	         }
+	         filepath.createNewFile();
+	         System.out.println("File "+filename+" added to "+ handledFiles);
+	     }
 
 	   void deleteFileMethod(String filename) {
 	        File filepath = new File(handledFiles +"/"+filename);
@@ -142,7 +142,7 @@ public class MyProject {
 	        }
 	
       public static void main(String[] args) {
-		     System.out.println("Welcome To Lockers Pvt. Ltd.");
+		     System.out.println("Welcome To Company Lockers Pvt. Ltd.");
 	         MyProject menu = new  MyProject();
 	         menu.mainPage();
 	     }
